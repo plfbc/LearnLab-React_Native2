@@ -1,15 +1,10 @@
 import React from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { Container } from "../../../components";
-import { study } from "../../../assets/media";
 
-import {MaterialIcons} from '@expo/vector-icons/';
+export default ({navigation}) => {
 
-export default () => {
-
-    const onPress = () => {
-      console.log("cliquei 3333")      
-    }
+    const onPress = () => navigation.navigate("Home")
 
     return (
       <Container.BoxCenter>

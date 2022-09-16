@@ -1,6 +1,6 @@
 import * as Course from './course'
-import Home from './home'
 import * as Onboarding from './onboarding'
+import Home from './home/view'
 
 export {
     Course,

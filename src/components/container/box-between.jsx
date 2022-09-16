@@ -7,10 +7,9 @@ const Container = ({children, style}) => {
   return (
       <View
         style={[{
-            flex: 1,
-            backgroundColor: "white",
-            alignItems:"center",
-            justifyContent: "center"
+            justifyContent: "space-between",
+            flexDirection: "row",
+            alignItems: "center"
         }, style]}
       >
           {children}

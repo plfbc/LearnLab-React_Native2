@@ -1,5 +1,11 @@
 import BoxCenter from "./box-center";
+import BoxFlex from "./box-flex";
+import BoxBetween from "./box-between";
+import BoxShadow from "./box-shadow";
 
 export {
-    BoxCenter
+    BoxCenter,
+    BoxFlex,
+    BoxBetween,
+    BoxShadow
 }
