@@ -1,8 +1,53 @@
 import React from 'react';
 import { Text, Image, View, TouchableOpacity } from "react-native";
 import {image} from './resources'
+import {
+  useFonts,
+  Montserrat_100Thin,
+  Montserrat_200ExtraLight,
+  Montserrat_300Light,
+  Montserrat_400Regular,
+  Montserrat_500Medium,
+  Montserrat_600SemiBold,
+  Montserrat_700Bold,
+  Montserrat_800ExtraBold,
+  Montserrat_900Black,
+  Montserrat_100Thin_Italic,
+  Montserrat_200ExtraLight_Italic,
+  Montserrat_300Light_Italic,
+  Montserrat_400Regular_Italic,
+  Montserrat_500Medium_Italic,
+  Montserrat_600SemiBold_Italic,
+  Montserrat_700Bold_Italic,
+  Montserrat_800ExtraBold_Italic,
+  Montserrat_900Black_Italic,
+} from '@expo-google-fonts/montserrat';
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    Montserrat_100Thin,
+    Montserrat_200ExtraLight,
+    Montserrat_300Light,
+    Montserrat_400Regular,
+    Montserrat_500Medium,
+    Montserrat_600SemiBold,
+    Montserrat_700Bold,
+    Montserrat_800ExtraBold,
+    Montserrat_900Black,
+    Montserrat_100Thin_Italic,
+    Montserrat_200ExtraLight_Italic,
+    Montserrat_300Light_Italic,
+    Montserrat_400Regular_Italic,
+    Montserrat_500Medium_Italic,
+    Montserrat_600SemiBold_Italic,
+    Montserrat_700Bold_Italic,
+    Montserrat_800ExtraBold_Italic,
+    Montserrat_900Black_Italic,
+  });
+
+  if (!fontsLoaded) {
+    return <Text> Carregando</Text>;
+  }
 
   function handle(){
     console.log("helllo learniano");
@@ -13,13 +58,15 @@ export default function App() {
       style={{
         alignSelf: "center",
         justifyContent: "center",
+        alignItems: "center",
         flex: 1,
       }}
     >
       <Text
         style={{
           color: "#04BFBF",
-          fontSize: 24
+          fontSize: 24,
+          fontFamily: ''
         }}
       >
         Acompanhe a LearninLab de forma fácil.
@@ -27,14 +74,16 @@ export default function App() {
       <Image
         source={image}
         style={{
-          height: 100,
-          width: 100
+          height: 250,
+          width: 250
         }}
       />
       <Text
         style={{
-          fontSize: 24,
-          color: "#04BFBF"
+          fontSize: 16,
+          color: "#04BFBF",
+          paddingVertical:20,
+          paddingHorizontal: 30
         }}
       >
         Não esqueça de acompanhar nossas redes sociais.
@@ -42,13 +91,22 @@ export default function App() {
       </Text>
       <TouchableOpacity
         onPress={() => handle()}
+        style={{
+          height:40,
+          width:40,
+          backgroundColor: "#04BFBF",
+          borderRadius:10,
+          alignItems: "center"
+        }}
       >
       <Text
         style={{
-          fontSize: 24
+          fontSize: 24,
+          color: 'white'
+          
         }}
       >
-        botão para proximo
+        >
       </Text>
       </TouchableOpacity>
     </View>
