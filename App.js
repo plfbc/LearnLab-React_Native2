@@ -7,6 +7,7 @@ export default function App() {
   function handle(){
     console.log("helllo learniano");
   }
+  
   return (
     <View
       style={{
@@ -49,7 +50,6 @@ export default function App() {
       >
         botão para proximo
       </Text>
-
       </TouchableOpacity>
     </View>
   );
